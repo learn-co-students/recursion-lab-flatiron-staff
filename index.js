@@ -20,3 +20,15 @@ function reverseString(string){
     return letter + reverseString(string.slice(0,-1))
   }
 }
+
+function isPalindrome(string) {
+  if (string.length <= 1) {
+    return true
+  } else {
+    if (string[0] === string[string.length-1]){
+      return isPalindrome(string.slice(1,-1))
+    } else {
+      return false
+    }
+  }
+}
