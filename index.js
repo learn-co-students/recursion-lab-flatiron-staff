@@ -40,3 +40,11 @@ function addUpTo(arr, idx) {
     return arr[idx] + addUpTo(arr, idx-1)
   }
 }
+
+function maxOf(arr){
+  if (arr.length <= 1) {
+    return arr[0]
+  } else {
+    return maxOf(arr[0] > arr[1] ? [arr[0], ...arr.slice(2)] : arr.slice(1))
+  }
+}
