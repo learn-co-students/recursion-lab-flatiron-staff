@@ -48,3 +48,15 @@ function maxOf(arr){
     return maxOf(arr[0] > arr[1] ? [arr[0], ...arr.slice(2)] : arr.slice(1))
   }
 }
+
+function includesNumber(arr, n) {
+  if (arr[0] === n) {
+    return true
+  } else {
+    if (arr.length <= 0) {
+      return false
+    } else {
+      return includesNumber(arr.slice(1),n)
+    }
+  }
+}
